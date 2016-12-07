@@ -2,25 +2,80 @@
 <html>
 <head>
 	<title></title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/bootstrap-table.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
 
 	<script type="text/javascript" src = "sorttable.js">
 		
 	</script>
 </head>
 <body>
-<table border="1" class = "sortable">
-<tr>
-<th>Name</th>
-<th>Salary</th>
-</tr>
-<tr>
-<td>Ramesh Raman</td>
-<td>5000</td>
-</tr>
-<tr>
-<td>Shabbir Hussein</td>
-<td>7000</td>
-</tr>
+<table class=" table-striped table-bordered table-reverse" data-toggle="table" data-show-refresh="true" data-show-toggle="true" data-search="true" data-select-item-name="toolbar1" data-pagination="ture" data-sort-name="name" data-sort-order="desc" >
+						    <thead>
+						    <tr>
+						        <th data-field="id" data-align="right" data-sortable="true">Player ID</th>
+						        <th data-field="name" data-sortable="true">Player Name</th>
+						        <th data-field="price" data-sortable="true">Impact Data</th>
+						        <th data-field="Video" >Video</th>
+						        <th data-field="sensor" >Sensor</th>
+						    </tr>
+						    </thead>
+						    
+  <tr>
+    <td>22</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>Jackson</td>
+    <td>94</td>
+    
+    
+
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Doe</td>
+    <td>80</td>
+
+  </tr>
+
+   <tr>
+    <td>12</td>
+    <td>Doe</td>
+    <td>80</td>
+
+   
+  </tr>
 </table>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script>
+		!function ($) {
+			$(document).on("click","ul.nav li.parent > a > span.icon", function(){		  
+				$(this).find('em:first').toggleClass("glyphicon-minus");	  
+			}); 
+			$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+
 </body>
 </html>
