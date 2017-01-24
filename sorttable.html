@@ -12,6 +12,19 @@
 	</script>
 </head>
 <body>
+
+<script>
+var myTable = " <table class='table-striped table-bordered table-reverse'  data-toggle='table' data-show-refresh='true' data-show-toggle='true' data-search='true'  data-select-item-name='toolbar1' data-pagination='true'  data-sort-name='name' data-sort-order='desc' ><thead><tr><th data-field='id' data-align='righ' data-sortable='true'>Player ID</th><th data-field='name' data-sortable='true'>Player Name</th><th data-field='price' data-sortable='true'>Impact Data</th><th data-field='Video' >Video</th>th data-field='sensor' >Sensor</th></tr></thead>";
+for (var i=0; i<10; i++) {
+    myTable+="<tr><td>" + i + "</td>";
+    myTable+="<td>" + i + "</td>";
+   
+    myTable+="<td >" + i + "</td></tr>";
+  }  
+   myTable+="</table>";		
+   document.write(myTable);
+
+</script>
 <table class=" table-striped table-bordered table-reverse" data-toggle="table" data-show-refresh="true" data-show-toggle="true" data-search="true" data-select-item-name="toolbar1" data-pagination="ture" data-sort-name="name" data-sort-order="desc" >
 						    <thead>
 						    <tr>

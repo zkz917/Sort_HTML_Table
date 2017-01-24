@@ -1,19 +1,3 @@
-/*
-  SortTable
-  version 2
-  7th April 2007
-  Stuart Langridge, http://www.kryogenix.org/code/browser/sorttable/
-
-  Instructions:
-  Download this file
-  Add <script src="sorttable.js"></script> to your HTML
-  Add class="sortable" to any table you'd like to make sortable
-  Click on the headers to sort
-
-  Thanks to many, many people for contributions and suggestions.
-  Licenced as X11: http://www.kryogenix.org/code/browser/licence.html
-  This basically means: do what you want with it.
-*/
 
 
 var stIsIE = /*@cc_on!@*/false;
@@ -52,10 +36,6 @@ sorttable = {
 
     if (table.tHead.rows.length != 1) return; // can't cope with two header rows
 
-    // Sorttable v1 put rows with a class of "sortbottom" at the bottom (as
-    // "total" rows, for example). This is B&R, since what you're supposed
-    // to do is put them in a tfoot. So, if there are sortbottom rows,
-    // for backwards compatibility, move them to tfoot (creating it if needed).
     sortbottomrows = [];
     for (var i=0; i<table.rows.length; i++) {
       if (table.rows[i].className.search(/\bsortbottom\b/) != -1) {
@@ -333,13 +313,7 @@ sorttable = {
   }
 }
 
-/* ******************************************************************
-   Supporting functions: bundled here to avoid depending on a library
-   ****************************************************************** */
 
-// Dean Edwards/Matthias Miller/John Resig
-
-/* for Mozilla/Opera9 */
 if (document.addEventListener) {
     document.addEventListener("DOMContentLoaded", sorttable.init, false);
 }
